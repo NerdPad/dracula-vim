@@ -40,23 +40,33 @@ hi PmenuSel ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#44475a gui=NON
 hi IncSearch ctermfg=17 ctermbg=228 cterm=NONE guifg=#282a36 guibg=#f1fa8c gui=NONE
 hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#bd93f9 guibg=NONE gui=NONE
-hi Folded ctermfg=61 ctermbg=235 cterm=NONE guifg=#6272a4 guibg=#282a36 gui=NONE
+
+if g:dracula_terminal_italics == 1
+  hi Folded ctermfg=61 ctermbg=235 cterm=italic guifg=#6272a4 guibg=#282a36 gui=italic
+else
+  hi Folded ctermfg=61 ctermbg=235 cterm=NONE guifg=#6272a4 guibg=#282a36 gui=NONE
+endif
+
 hi SignColumn ctermfg=246 ctermbg=235 cterm=NONE guifg=#909194 guibg=#44475a gui=NONE
 hi FoldColmun ctermfg=246 ctermbg=235 cterm=NONE guifg=#909194 guibg=#44475a gui=NONE
 hi Normal guifg=#f8f8f2 guibg=#282a36 gui=NONE
 hi Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#bd93f9 guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#bd93f9 guibg=NONE gui=NONE
+
 if g:dracula_terminal_italics == 1
-  hi Comment ctermfg=61 ctermbg=NONE cterm=NONE guifg=#6272a4 guibg=NONE gui=italic
+  hi Comment ctermfg=61 ctermbg=NONE cterm=italic guifg=#6272a4 guibg=NONE gui=italic
 else
   hi Comment ctermfg=61 ctermbg=NONE cterm=NONE guifg=#6272a4 guibg=NONE gui=NONE
 endif
+
 hi Conditional ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
+
 if g:dracula_terminal_italics == 1
-  hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+  hi Constant ctermfg=NONE ctermbg=NONE cterm=italic guifg=NONE guibg=NONE gui=NONE
 else
   hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 endif
+
 hi Define ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#468410 gui=bold
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b080b guibg=NONE gui=NONE
@@ -73,14 +83,32 @@ hi NonText ctermfg=231 ctermbg=NONE cterm=NONE guifg=#525563 guibg=#282a36 gui=N
 hi Number ctermfg=141 ctermbg=NONE cterm=NONE guifg=#bd93f9 guibg=NONE gui=NONE
 hi Operator ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
 hi PreProc ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
-hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
+
+if g:dracula_terminal_italics == 1
+  hi Special ctermfg=231 ctermbg=NONE cterm=italic guifg=#f8f8f2 guibg=NONE gui=italic
+else
+  hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
+endif
+
 hi SpecialKey ctermfg=231 ctermbg=235 cterm=NONE guifg=#525563 guibg=#282a36 gui=NONE
 hi Statement ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
 hi StorageClass ctermfg=117 ctermbg=NONE cterm=NONE guifg=#8be9fd guibg=NONE gui=italic
-hi String ctermfg=228 ctermbg=NONE cterm=NONE guifg=#f1fa8c guibg=NONE gui=NONE
+
+if g:dracula_terminal_italics == 1
+  hi String ctermfg=228 ctermbg=NONE cterm=italic guifg=#f1fa8c guibg=NONE gui=italic
+else
+  hi String ctermfg=228 ctermbg=NONE cterm=NONE guifg=#f1fa8c guibg=NONE gui=NONE
+elseif
+
 hi Tag ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
-hi Todo ctermfg=61 ctermbg=NONE cterm=inverse,bold guifg=#6272a4 guibg=NONE gui=inverse,bold
+
+if g:dracula_terminal_italics == 1
+  hi Todo ctermfg=61 ctermbg=NONE cterm=inverse,bold,italic guifg=#6272a4 guibg=NONE gui=inverse,bold,italic
+else
+  hi Todo ctermfg=61 ctermbg=NONE cterm=inverse,bold,italic guifg=#6272a4 guibg=NONE gui=inverse,bold,italic
+elseif
+
 hi Type ctermfg=117 ctermbg=NONE cterm=NONE guifg=#8be9fd guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi rubyClass ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
