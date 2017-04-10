@@ -98,7 +98,7 @@ if g:dracula_terminal_italics == 1
   hi String ctermfg=228 ctermbg=NONE cterm=italic guifg=#f1fa8c guibg=NONE gui=italic
 else
   hi String ctermfg=228 ctermbg=NONE cterm=NONE guifg=#f1fa8c guibg=NONE gui=NONE
-elseif
+endif
 
 hi Tag ctermfg=212 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
@@ -107,7 +107,7 @@ if g:dracula_terminal_italics == 1
   hi Todo ctermfg=61 ctermbg=NONE cterm=inverse,bold,italic guifg=#6272a4 guibg=NONE gui=inverse,bold,italic
 else
   hi Todo ctermfg=61 ctermbg=NONE cterm=inverse,bold,italic guifg=#6272a4 guibg=NONE gui=inverse,bold,italic
-elseif
+endif
 
 hi Type ctermfg=117 ctermbg=NONE cterm=NONE guifg=#8be9fd guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
